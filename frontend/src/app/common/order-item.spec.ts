@@ -12,7 +12,10 @@ import { Product } from './product';
 
 describe('OrderItem', () => {
   it('should create OrderItem', () => {
-    const mockProduct = new Product('1', 'Sample Product', 100);
+    const mockProduct = new Product();
+mockProduct.id = '1';
+mockProduct.name = 'Sample Product';
+mockProduct.price = 100;
     const cartItem = new CartItem(mockProduct);
     expect(new OrderItem(cartItem)).toBeTruthy();
   });
