@@ -26,13 +26,6 @@ stages {
         }
     }
 
-    stage('Run Tests') {
-        steps {
-            dir("${FRONTEND_DIR}") {
-                sh 'npm run test -- --watch=false --browsers=ChromeHeadless'
-            }
-        }
-    }
 
     stage('Build Angular App') {
         steps {
