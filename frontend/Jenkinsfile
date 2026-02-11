@@ -50,3 +50,5 @@ post {
         echo 'Frontend Build Failed!'
     }
 }
+
+}
