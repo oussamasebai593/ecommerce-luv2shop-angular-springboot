@@ -11,12 +11,23 @@ import { CartItem } from './cart-item';
 import { Product } from './product';
 
 describe('OrderItem', () => {
-  it('should create OrderItem', () => {
-    const mockProduct = new Product();
-mockProduct.id = '1';
-mockProduct.name = 'Sample Product';
-mockProduct.price = 100;
-    const cartItem = new CartItem(mockProduct);
-    expect(new OrderItem(cartItem)).toBeTruthy();
+  it('should create an instance', () => {
+    const dummyProduct: Product = {
+      id: '1',
+      sku: 'SKU1',
+      name: 'Sample Product',
+      description: 'Sample description',
+      unitPrice: 100,
+      imageUrl: 'sample.jpg',
+      active: true,
+      unitsInStock: 5,
+      dateCreated: new Date(),
+      lastUpdated: new Date()
+    };
+
+    const cartItem = new CartItem(dummyProduct);
+    const orderItem = new OrderItem(cartItem);
+    expect(orderItem).toBeTruthy();
   });
 });
+
