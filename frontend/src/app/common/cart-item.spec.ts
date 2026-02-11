@@ -11,7 +11,7 @@ import { Product } from './product';
 
 describe('CartItem', () => {
   it('should create an instance', () => {
-    const dummyProduct: Product = { id: 1, name: 'Test', price: 100, quantity: 1 };
+    const dummyProduct: Product = { id: '1', name: 'Test', price: 100, quantity: 1 };
     const cartItem = new CartItem(dummyProduct);
     expect(cartItem).toBeTruthy();
   });
